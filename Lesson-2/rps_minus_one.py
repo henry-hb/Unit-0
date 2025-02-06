@@ -40,7 +40,7 @@ def comp_keep(comp_hand):
     comp_keep_choice = random.randint(0,1)
     return comp_hand[comp_keep_choice]
 
-def winner_evaluation(comp_final, player_final, comp_score, player_score):
+def winner_evaluation(comp_final, player_final):
     if(comp_final == player_final):
         return "TIE"
     elif(player_final == "rock" and comp_final == "paper") or (player_final == "paper" and comp_final == "scissors") or (player_final == "scissors" and comp_final == "rock"):
@@ -70,14 +70,15 @@ def main():
 
         # evaluate winner
         print(f"You chose {player_final} and your opponent chose {comp_final}. ")
-        print(winner_evaluation(comp_final, player_final, comp_score, player_score))
-        if(winner_evaluation(comp_final, player_final, comp_score, player_score) == "WIN"):
+        winner = winner_evaluation(comp_final, player_final)
+        print(winner)
+        if(winner) == "WIN":
             player_score += 1
-        if(winner_evaluation(comp_final, player_final, comp_score, player_score) == "LOSE"):
+        if(winner) == "LOSE":
             comp_score += 1
         print(f"Current score is player: {player_score} Computer: {comp_score}")
-        keep_playing = input("Do you wish to keep playing? (True or False)") == "True"
-    print(f"Final score is player: {player_score} Computer: {comp_score}")
+        keep_playing = input("Do you wish to keep playing? (True or False)").strip().lower() == "true"
+    print(f"Game over! Final score is player: {player_score} Computer: {comp_score}")
 
 if __name__ == "__main__":
     main()
