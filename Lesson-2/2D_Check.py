@@ -14,6 +14,8 @@ def main():
         [163,203,26,408,547,729,628],
         [2,7,26,82,172,307,392],
         [16,24,38,74,167,511,809]
+        ]
+
     continents = [
         "Africa",
         "Asia",
@@ -23,10 +25,17 @@ def main():
         "South America"
     ]
 
+    years = [1750, 1800, 1850, 1900, 1950, 2000, 2050]
+    
 
-
-
-    ]
+    #years
+    print("    Years     ", end="")
+    for i in years:
+        print(i, end="   ")
+    print("")
+    #continent headings
+    for i in continents:
+        print(i)
 
 if __name__ == "__main__":
     main()
