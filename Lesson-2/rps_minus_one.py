@@ -4,7 +4,7 @@ import random
 """
 Name: Henry Hall-Brown
 File: rps_minus_one.py
-Description: IMplements the Rock Paper Scissors Minus One Game from Squid Gmae
+Description: IMplements the Rock Paper Scissors Minus One Game from Squid Game
 """
 
 """
